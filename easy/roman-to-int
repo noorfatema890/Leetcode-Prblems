@@ -1,0 +1,37 @@
+class Solution(object):
+    def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        values = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+        }
+        valid_char = {'I', 'V', 'X', 'L', 'C', 'D', 'M'}
+        s = s.upper()
+        for char in s:
+            if char not in valid_char:
+                print("Invalid character")
+                return
+        s = s.upper()
+        total = 0
+        n = len(s)
+    
+        if (n>=1) and (n<=15):
+        
+            for i in range(n):
+                if i < n - 1 and values[s[i]] < values[s[i+1]]:
+                    total -= values[s[i]]
+                else:
+                    total += values[s[i]]
+            return total
+        
+        else:
+            ('\nInvalid string length')
+        
