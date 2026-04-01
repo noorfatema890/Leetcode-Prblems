@@ -1,0 +1,7 @@
+import math
+class Solution(object):
+    def mySqrt(self, x):
+        sqrt = math.sqrt(x)
+        rounded_num = math.floor(sqrt)
+        return int(rounded_num)
+        
