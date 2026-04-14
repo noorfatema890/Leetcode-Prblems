@@ -1,0 +1,9 @@
+class Solution(object):
+    def addBinary(self,a, b):
+        ad = int(a,2)
+        bd = int(b,2)
+        sum = ad + bd
+        result = bin(sum)
+        ans = result[2:]
+        return ans
+        
