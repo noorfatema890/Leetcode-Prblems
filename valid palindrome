@@ -1,0 +1,17 @@
+import re
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        palindrome = False
+        if s == " ":
+            palindrome = True
+        clean_text = (re.sub(r'[^a-zA-Z0-9\s]', '', s)).strip().lower()
+        s_new = clean_text.replace(" ",'')
+        if s_new == s_new[::-1]:
+            palindrome = True
+        return palindrome
+
+        
